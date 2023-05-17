@@ -1,0 +1,14 @@
+spring:
+  thymeleaf:
+    cache: false
+
+server:
+  port: 8080
+
+app:
+  base:
+    url: http://localhost:${server.port}/
+  chat:
+    url: ${app.base.url}index?username=%s
+  websocket:
+    url: ws://localhost:${server.port}/chat/
